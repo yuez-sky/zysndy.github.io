@@ -315,6 +315,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/12/hello-world/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/01/12/hello-world/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -395,7 +405,9 @@
 
   
     <div class="comments" id="comments">
-      <div id="uyan_frame"></div>
+      
+        <div id="gitment-container"></div>
+      
     </div>
 
   
@@ -534,6 +546,12 @@
 
 
 
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1272259745&web_id=1272259745" language="JavaScript"></script>
+  </div>
+
+
+
         
       </div>
     </footer>
@@ -656,14 +674,6 @@
 
 
   
-    
-
-    
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2155002"></script>
-      <!-- UY END -->
-    
-  
 
 
 
@@ -675,6 +685,43 @@
 
 
 
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'zysndy',
+            repo: 'https://github.com/zysndy/zysndy.github.io.git',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3fc9d386fbe88145649f1d0cd70a42984eba5d37',
+            
+                client_id: '4a86f52ca1d54c1e418d'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
