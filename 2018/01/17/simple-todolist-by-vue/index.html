@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="vue," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Vue实践 【二】todolist开发项目目录结构todolist-vue12345678/   -build  // webpack 打包配置文件  -config // 项目配置文件  -node_modules // packages包  -src  // 源代码文件目录  -static   -test // 测试单元的目录  -package.json // 项目相关描述文件 程序代码编">
+<meta name="keywords" content="vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="simple todolist by vue">
+<meta property="og:url" content="https://zysndy.github.io/2018/01/17/simple-todolist-by-vue/index.html">
+<meta property="og:site_name" content="zysndy&#39;s Blog">
+<meta property="og:description" content="Vue实践 【二】todolist开发项目目录结构todolist-vue12345678/   -build  // webpack 打包配置文件  -config // 项目配置文件  -node_modules // packages包  -src  // 源代码文件目录  -static   -test // 测试单元的目录  -package.json // 项目相关描述文件 程序代码编">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-01-17T15:22:23.136Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="simple todolist by vue">
+<meta name="twitter:description" content="Vue实践 【二】todolist开发项目目录结构todolist-vue12345678/   -build  // webpack 打包配置文件  -config // 项目配置文件  -node_modules // packages包  -src  // 源代码文件目录  -static   -test // 测试单元的目录  -package.json // 项目相关描述文件 程序代码编">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://zysndy.github.io/2018/01/17/simple-todolist-by-vue/"/>
+
+
+
+
+
+  <title>simple todolist by vue | zysndy's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">zysndy's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2018/01/17/simple-todolist-by-vue/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="zhangyue">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zysndy's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">simple todolist by vue</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-17T23:22:02+08:00">
+                2018-01-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/01/17/simple-todolist-by-vue/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/01/17/simple-todolist-by-vue/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Vue实践-【二】todolist开发"><a href="#Vue实践-【二】todolist开发" class="headerlink" title="Vue实践 【二】todolist开发"></a>Vue实践 【二】todolist开发</h2><h3 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="项目目录结构"></a>项目目录结构</h3><p>todolist-vue<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/ </span><br><span class="line">  -build  // webpack 打包配置文件</span><br><span class="line">  -config // 项目配置文件</span><br><span class="line">  -node_modules // packages包</span><br><span class="line">  -src  // 源代码文件目录</span><br><span class="line">  -static </span><br><span class="line">  -test // 测试单元的目录</span><br><span class="line">  -package.json // 项目相关描述文件</span><br></pre></td></tr></table></figure></p>
+<p>程序代码编码的目录都是在<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">src</span><br><span class="line">  -assets // 静态文件存储目录</span><br><span class="line">  -components// 页面组件存放目录</span><br><span class="line">  -router // 路由控制目录</span><br><span class="line">  -App.vue // vue页面，在main.js中作为组件被引用</span><br><span class="line">  -main.js // 入口，在build/webpack.base.conf.js 中定义</span><br></pre></td></tr></table></figure></p>
+<p>编写完成后，可以通过<figure class="highlight plain"><figcaption><span>run dev``` 实时看到修改的效果，通过 ```npm run build``` 来运行webpack打包源码生成静态文件供正式环境访问。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### Vue基本语法</span><br><span class="line">#### vue基本结构</span><br></pre></td></tr></table></figure></p>
+<p>new Vue({<br>  name: ‘’,<br>  data () {return {}}, // 属性<br>  props: [], // 组件传递的值<br>  components: [],// 使用组件<br>  created (){}, // 创建<br>  mounted (){}, // 挂载<br>  computed: {}, // 计算属性<br>  watch: {}, // 侦听器<br>  methods: {} // 方法<br>})<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### vue常用命令</span><br><span class="line">##### v-model</span><br></pre></td></tr></table></figure></p>
+<h1 id="双向数据绑定"><a href="#双向数据绑定" class="headerlink" title="双向数据绑定"></a>双向数据绑定</h1><input type="text" v-model="name">
+
+<p><select v-model="selected"><br>    <option value="1"></option><br></select><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">##### v-is v-else</span><br></pre></td></tr></table></figure></p>
+<h1 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h1><p><div v-if="is_show"><br>    <span>show</span><br></div></p>
+<p><div v-else=""><br>    <span>hide</span><br></div><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##### v-bind (简写为 :)</span><br></pre></td></tr></table></figure></p>
+<h1 id="绑定属性"><a href="#绑定属性" class="headerlink" title="绑定属性"></a>绑定属性</h1><p><a v-bind:href="item_url">链接</a></p>
+<p><img :src="item_photo">图片</p>
+<p><li :class="[state == 'effective' ? 'active' : '']"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">##### v-on (简写为 @)</span><br></pre></td></tr></table></figure></li></p>
+<p><a v-on:click="addItem">链接</a></p>
+<p><a @click="addItem">链接</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### vue生命周期</span><br><span class="line">Vue的生命周期</span><br><span class="line">##### beforeCreate </span><br><span class="line">在实例初始化之后，数据观测(data observer) 和 event/watcher 事件配置之前被调用。</span><br><span class="line">##### created  </span><br><span class="line">实例已经创建完成之后被调用。在这一步，实例已完成以下的配置：数据观测(data observer)，属性和方法的运算， watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。</span><br><span class="line">##### beforeMount</span><br><span class="line">在挂载开始之前被调用：相关的 render 函数首次被调用。</span><br><span class="line">##### mounted</span><br><span class="line">el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</span><br><span class="line">##### beforeUpdate</span><br><span class="line">数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。</span><br><span class="line">你可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。</span><br><span class="line">该钩子在服务器端渲染期间不被调用。</span><br><span class="line">##### updated</span><br><span class="line">由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。</span><br><span class="line">当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态，因为这可能会导致更新无限循环。</span><br><span class="line">##### activated</span><br><span class="line">keep-alive 组件激活时调用。</span><br><span class="line">该钩子在服务器端渲染期间不被调用。</span><br><span class="line">##### deactivated</span><br><span class="line">keep-alive 组件停用时调用。</span><br><span class="line">该钩子在服务器端渲染期间不被调用。</span><br><span class="line">##### beforeDestroy</span><br><span class="line">实例销毁之前调用。在这一步，实例仍然完全可用。</span><br><span class="line">该钩子在服务器端渲染期间不被调用。</span><br><span class="line">##### destroyed</span><br><span class="line">Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</span><br><span class="line">该钩子在服务器端渲染期间不被调用。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### Todolist实现</span><br><span class="line">#### vue devtools推荐</span><br><span class="line">chrome浏览器插件 vue-devtools。可以查看当前运行状态和组件内的值。</span><br><span class="line"></span><br><span class="line">##### todolist实现</span><br><span class="line"></span><br><span class="line">1.新建 todolist.vue,初步编写如下</span><br></pre></td></tr></table></figure></p>
+<template><br>  <div>todolist</div><br></template>
+
+<script>
+export default {
+  name: 'todolist'
+}
+</script>
+
+<style scoped>
+
+<p></style><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2.在router/index.js修改如下,增加todolist的页面路由</span><br></pre></td></tr></table></figure><p></p>
+<p>import Vue from ‘vue’<br>import Router from ‘vue-router’<br>import HelloWorld from ‘@/components/HelloWorld’<br>import Todolist from ‘@/components/Todolist’</p>
+<p>Vue.use(Router)</p>
+<p>export default new Router({<br>  routes: [<br>    {<br>      path: ‘/‘,<br>      name: ‘HelloWorld’,<br>      component: HelloWorld<br>    },<br>    {<br>      path: ‘/todolist’,<br>      name: ‘todolist’,<br>      component: Todolist<br>    }<br>  ]<br>})</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">3.浏览器中输入localhost:8080/#/todolist, 能看到页面上会出现todolist，但是也会出现一个vue的logo，去除这logo只需要在app.vue中去除```id=&apos;app&apos;```下的image标签即可</span><br><span class="line">4.完善todolist页面功能</span><br></pre></td></tr></table></figure>
+<template><br>  <div><br>    <div><br>      <input type="text" name="new-todo" class="add-new-todo" v-model="name"><br>      <a href="javascript:void(0)" @click="add" class="btn-add" target="_blank" rel="noopener">add</a><br>    </div><br>    <ul><br>      <li v-for="(item, index) in lists" :key="index"><br>        <span class="list-info"></span><br>        <a href="javascript:void(0)" class="btn-del" @click="del(index)" target="_blank" rel="noopener">del</a><br>      </li><br>    </ul><br>  </div><br></template>
+
+<script>
+export default {
+  name: 'todolist',
+  data () {
+    return {
+      name: '',
+      lists: []
+    }
+  },
+  created () {
+    document.title = 'todolist'
+  },
+  methods: {
+    add () {
+      this.lists.push({
+        name: this.name,
+        state: 'todo'
+      })
+      this.name = ''
+    },
+    del (index) {
+      this.lists.splice(index, 1)
+    }
+  }
+}
+</script>
+
+<p><style scoped><br>.add-new-todo {<br>  width:90%;<br>  height: 40px;<br>}</p>
+<p>.btn-add {<br>  text-decoration: none;<br>  padding: 10px;<br>  background: #eee;<br>  border-radius: 5px;<br>}</p>
+<p>ul {<br>  list-style-type: square;<br>}<br>ul li {<br>  height: 50px;<br>  line-height: 50px;<br>}</p>
+<p>ul li .list-info{<br>  display: inline-block;<br>  width: 90%;<br>  text-align: left;<br>}</p>
+<p>.btn-del {<br>  text-decoration: none;<br>  padding: 10px;<br>  background: orange;<br>  border-radius: 5px;<br>}<br></style><br>```</p>
+<p>至此，一个简单的todolist就完成了。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/13/vue-learning-init/" rel="next" title="Vue实践 【一】项目初始化">
+                <i class="fa fa-chevron-left"></i> Vue实践 【一】项目初始化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">zhangyue</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue实践-【二】todolist开发"><span class="nav-number">1.</span> <span class="nav-text">Vue实践 【二】todolist开发</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#项目目录结构"><span class="nav-number">1.1.</span> <span class="nav-text">项目目录结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#双向数据绑定"><span class="nav-number"></span> <span class="nav-text">双向数据绑定</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件判断"><span class="nav-number"></span> <span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#绑定属性"><span class="nav-number"></span> <span class="nav-text">绑定属性</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zhangyue</span>
+
+  
+
+  
+    <span class="site-pv">
+      <script src="https://s95.cnzz.com/stat.php?id=1272259745&web_id=1272259745" type="text/javascript"></script>
+    </span>
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1272259745&web_id=1272259745" language="JavaScript"></script>
+  </div>
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'zysndy',
+            repo: 'zysndy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3fc9d386fbe88145649f1d0cd70a42984eba5d37',
+            
+                client_id: '4a86f52ca1d54c1e418d'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
