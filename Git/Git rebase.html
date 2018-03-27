@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content=",,," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
+<meta name="description" content="rebase和merge  merge 根据同一起点，把修改合并，然后生成一个commit rebase 抽出分支的commit， 合并目标分支commit，置顶抽出的commit   merge 123456master： master:1 -- master:2			|dev   :     |-- dev:1 --- dev:2 执行git merge masterdev的log：dev">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="website">
-<meta property="og:title" content="zysndy&#39;s Blog">
-<meta property="og:url" content="https://zysndy.github.io/archives/2017/07/index.html">
+<meta property="og:title" content="Git rebase">
+<meta property="og:url" content="https://zysndy.github.io/Git/Git rebase.html">
 <meta property="og:site_name" content="zysndy&#39;s Blog">
+<meta property="og:description" content="rebase和merge  merge 根据同一起点，把修改合并，然后生成一个commit rebase 抽出分支的commit， 合并目标分支commit，置顶抽出的commit   merge 123456master： master:1 -- master:2			|dev   :     |-- dev:1 --- dev:2 执行git merge masterdev的log：dev">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-27T23:06:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="zysndy&#39;s Blog">
+<meta name="twitter:title" content="Git rebase">
+<meta name="twitter:description" content="rebase和merge  merge 根据同一起点，把修改合并，然后生成一个commit rebase 抽出分支的commit， 合并目标分支commit，置顶抽出的commit   merge 123456master： master:1 -- master:2			|dev   :     |-- dev:1 --- dev:2 执行git merge masterdev的log：dev">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zysndy.github.io/archives/2017/07/"/>
+  <link rel="canonical" href="https://zysndy.github.io/Git/Git rebase.html"/>
 
 
 
 
 
-  <title>归档 | zysndy's Blog</title>
+  <title>Git rebase | zysndy's Blog</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,74 +249,68 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
 
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 11 篇日志。 继续努力。
-      </span>
+	<h1 class="post-title" itemprop="name headline">Git rebase</h1>
+
+
+
+</header>
 
       
+      
+      
+      <div class="post-body">
+        
+        
+          <ul>
+<li><p>rebase和merge</p>
+<ul>
+<li>merge 根据同一起点，把修改合并，然后生成一个commit</li>
+<li>rebase 抽出分支的commit， 合并目标分支commit，置顶抽出的commit</li>
+</ul>
+</li>
+<li><p>merge</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">master： master:1 -- master:2</span><br><span class="line">			|</span><br><span class="line">dev   :     |-- dev:1 --- dev:2 执行git merge master</span><br><span class="line"></span><br><span class="line">dev的log：</span><br><span class="line">dev   ： master:1 --&gt; dev:1 --&gt; dev:2 --&gt; master:2 --&gt; merge commit</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>rebase</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">master： master:1 -- master:2</span><br><span class="line">			|</span><br><span class="line">dev   :     |-- dev:1 -- dev:2 执行git rebase master</span><br><span class="line"></span><br><span class="line">dev的log：</span><br><span class="line">dev   ： master:1 --&gt; master:2 --&gt; dev:1 --&gt; dev:2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在合并时，处理冲突：　</p>
+<ul>
+<li><p>merge </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">有冲突-&gt;停止合并-&gt;手动解决后-&gt;再次merge</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>rebase </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">有冲突-&gt;暂停操作-&gt;手动解决，git rebase --continue继续</span><br><span class="line">			  -&gt; --skip跳过</span><br><span class="line">			  -&gt; --abort 停止rebase操作</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>git rebase -i HEAD~3 对所做的提交进行修改,选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># Commands:</span><br><span class="line"># p, pick = use commit 不做任何修改</span><br><span class="line"># r, reword = use commit, but edit the commit message 只修改提交注释信息</span><br><span class="line"># e, edit = use commit, but stop for amending </span><br><span class="line">	修改提交的文件，做增补提交</span><br><span class="line"># s, squash = use commit, but meld into previous commit</span><br><span class="line">	将该条提交合并到上一条提交，提交注释也一并合并</span><br><span class="line"># f, fixup = like &quot;squash&quot;, but discard this commit&apos;s log message</span><br><span class="line">	将该条提交合并到上一条提交，废弃该条提交的注释</span><br><span class="line"># x, exec = run command (the rest of the line) using shell</span><br><span class="line"># d, drop = remove commit</span><br><span class="line">	删除某次提交</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>git cherry-pick <commit id=""> 取某一个分支中的一个或几个commit(s)来进行合并</commit></p>
+</li>
+<li>git stash [pop/apply /drop/save] 将改动存入暂存区[弹出暂存区记录/恢复一个暂存区内记录]</li>
+<li>git blame 文件逐行追溯</li>
+<li>git clean 清除工作区未跟踪文件</li>
+</ul>
 
         
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/18/Git-日常使用命令/" itemprop="url">
-              
-                <span itemprop="name">Git 日常使用命令</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-18T20:47:22+08:00"
-              content="2017-07-18" >
-          07-18
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
+      
     </div>
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
@@ -319,6 +318,18 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -355,7 +366,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -366,7 +377,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -377,7 +388,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -552,6 +563,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -598,6 +613,34 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname, 
+            owner: 'zysndy',
+            repo: 'zysndy.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '3fc9d386fbe88145649f1d0cd70a42984eba5d37',
+            
+                client_id: '4a86f52ca1d54c1e418d'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
     
 
 

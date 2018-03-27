@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Vue.js," />
+  <meta name="keywords" content="Nodejs," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一 环境搭建 本地安装node和npm，地址和安装方法可以官网 （官网链接）。官网下载较慢的话，windows安装版本可以通过我的百度云，密码sq6a，版本是v8.9.4。后续版本升级的话可以通过如下代码： 12npm install -g nn stable # 安装最新的版本  【可选】npm安装成功后，可以安装cnpm淘宝镜像，用cnpm替代npm，速度比npm快 1npm install">
-<meta name="keywords" content="Vue.js">
+<meta name="description" content="起因因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。 实现图像识别Api图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是Face++  登陆注册并完善相关信息后，提供了AppKey和AppSecret来调用提供的Api 在使用Postman简单测试后，发现可">
+<meta name="keywords" content="Nodejs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue实践 【一】项目初始化">
-<meta property="og:url" content="https://zysndy.github.io/2017/08/02/Vue.js/vue-learning-init/index.html">
+<meta property="og:title" content="Nodejs + Face++ 识别身份证照片">
+<meta property="og:url" content="https://zysndy.github.io/2018/03/10/Nodejs/Nodejs-Face-识别身份证照片/index.html">
 <meta property="og:site_name" content="zysndy&#39;s Blog">
-<meta property="og:description" content="一 环境搭建 本地安装node和npm，地址和安装方法可以官网 （官网链接）。官网下载较慢的话，windows安装版本可以通过我的百度云，密码sq6a，版本是v8.9.4。后续版本升级的话可以通过如下代码： 12npm install -g nn stable # 安装最新的版本  【可选】npm安装成功后，可以安装cnpm淘宝镜像，用cnpm替代npm，速度比npm快 1npm install">
+<meta property="og:description" content="起因因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。 实现图像识别Api图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是Face++  登陆注册并完善相关信息后，提供了AppKey和AppSecret来调用提供的Api 在使用Postman简单测试后，发现可">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T22:42:58.723Z">
+<meta property="og:updated_time" content="2018-03-27T23:10:10.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue实践 【一】项目初始化">
-<meta name="twitter:description" content="一 环境搭建 本地安装node和npm，地址和安装方法可以官网 （官网链接）。官网下载较慢的话，windows安装版本可以通过我的百度云，密码sq6a，版本是v8.9.4。后续版本升级的话可以通过如下代码： 12npm install -g nn stable # 安装最新的版本  【可选】npm安装成功后，可以安装cnpm淘宝镜像，用cnpm替代npm，速度比npm快 1npm install">
+<meta name="twitter:title" content="Nodejs + Face++ 识别身份证照片">
+<meta name="twitter:description" content="起因因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。 实现图像识别Api图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是Face++  登陆注册并完善相关信息后，提供了AppKey和AppSecret来调用提供的Api 在使用Postman简单测试后，发现可">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zysndy.github.io/2017/08/02/Vue.js/vue-learning-init/"/>
+  <link rel="canonical" href="https://zysndy.github.io/2018/03/10/Nodejs/Nodejs-Face-识别身份证照片/"/>
 
 
 
 
 
-  <title>Vue实践 【一】项目初始化 | zysndy's Blog</title>
+  <title>Nodejs + Face++ 识别身份证照片 | zysndy's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2017/08/02/Vue.js/vue-learning-init/">
+    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2018/03/10/Nodejs/Nodejs-Face-识别身份证照片/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zysndy">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue实践 【一】项目初始化</h1>
+          <h1 class="post-title" itemprop="name headline">Nodejs + Face++ 识别身份证照片</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-02T17:01:17+08:00">
-                2017-08-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-10T16:38:43+08:00">
+                2018-03-10
               </time>
             
 
@@ -315,8 +315,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Vue-js/" itemprop="url" rel="index">
-                    <span itemprop="name">Vue.js</span>
+                  <a href="/categories/Node-js/" itemprop="url" rel="index">
+                    <span itemprop="name">Node.js</span>
                   </a>
                 </span>
 
@@ -333,8 +333,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/08/02/Vue.js/vue-learning-init/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/08/02/Vue.js/vue-learning-init/" itemprop="commentsCount"></span>
+                <a href="/2018/03/10/Nodejs/Nodejs-Face-识别身份证照片/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/10/Nodejs/Nodejs-Face-识别身份证照片/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -362,23 +362,31 @@
       
 
       
-        <h3 id="一-环境搭建"><a href="#一-环境搭建" class="headerlink" title="一 环境搭建"></a>一 环境搭建</h3><ol>
-<li><p>本地安装node和npm，地址和安装方法可以官网 （<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官网链接</a>）。官网下载较慢的话，windows安装版本可以通过<a href="https://pan.baidu.com/s/1o9KzGjo" target="_blank" rel="noopener">我的百度云</a>，密码sq6a，版本是v8.9.4。后续版本升级的话可以通过如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g n</span><br><span class="line">n stable # 安装最新的版本</span><br></pre></td></tr></table></figure>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="图像识别Api"><a href="#图像识别Api" class="headerlink" title="图像识别Api"></a>图像识别Api</h3><p>图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是<strong>Face++</strong></p>
+<ul>
+<li>登陆注册并完善相关信息后，提供了<code>AppKey</code>和<code>AppSecret</code>来调用提供的Api</li>
+<li>在使用<code>Postman</code>简单测试后，发现可行，post请求后，提供的接口会返回一组身份的信息JSON数据</li>
+</ul>
+<blockquote>
+<p>Postman 是通过能强大的网页调试与发送网页HTTP请求，并能运行测试用例的的Chrome插件，现在提供了客户端。只要在GUI界面里，填写相应的URl和数据，选择相应的方法，<code>POST</code>、 <code>GET</code>、 <code>PUT</code>、 <code>DELETE</code>，就能够将结果返回回来，不需要编写代码。<a href="https://www.getpostman.com/" target="_blank" rel="noopener">官网链接</a></p>
+</blockquote>
+<h3 id="Nodejs实现"><a href="#Nodejs实现" class="headerlink" title="Nodejs实现"></a>Nodejs实现</h3><p>我是在mac的终端下开发的，如果是window环境系，部分命令不适用，需要替换合适的命令。</p>
+<ol>
+<li>目录结构</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * images 资源文件</span><br><span class="line"> * package.json  执行npm init 后会自动生产</span><br><span class="line"> * index.js 实现的逻辑文件</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">- idCard</span><br><span class="line">    - index.js</span><br><span class="line">    - images</span><br><span class="line">        - ***.jpg</span><br><span class="line">        - ***.png</span><br><span class="line">        - ....</span><br><span class="line">    - package.json</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>安装 <code>shelljs</code> 包<br>因为需要简单的shell命令执行</p>
 </li>
-<li><p>【可选】npm安装成功后，可以安装cnpm<a href="https://npm.taobao.org/" target="_blank" rel="noopener">淘宝镜像</a>，用cnpm替代npm，速度比npm快</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>全局安装vue-cli,vue项目脚手架，用于初始化vue项目</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g vue-cli</span><br><span class="line">cnpm install -g vue-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>安装成功后，可通过相应的命令检查：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm -v # 检查npm版本</span><br><span class="line">node -v # 检查node版本</span><br><span class="line">vue -v # 检查vue-cli的版本，非vue版本</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+<li><p>index.js实现（比较简单）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">var shell = require(&apos;shelljs&apos;)</span><br><span class="line">var images = shell.exec(&apos;ls ./images/*&apos;, &#123;silent: true&#125;).toString()</span><br><span class="line">var arr = images.split(&apos;\n&apos;)</span><br><span class="line"></span><br><span class="line">var api_key = &apos;xxx&apos; // 自己申请的apikey</span><br><span class="line">var api_secret = &apos;xxx&apos; // 自己申请的api_secret</span><br><span class="line">var result = []</span><br><span class="line">for (var item in arr) &#123;</span><br><span class="line">    (function(item) &#123;</span><br><span class="line">        setTimeout(function() &#123;</span><br><span class="line">            var tmp = &apos;@&apos; + arr[item]</span><br><span class="line">            if (tmp == &apos;@&apos;) &#123;</span><br><span class="line">                return</span><br><span class="line">            &#125;</span><br><span class="line">            var cmd = &apos;curl -X POST &quot;https://api-cn.faceplusplus.com/cardpp/v1/ocridcard&quot; -F &quot;api_key=&quot;&apos; + api_key +  &apos;&quot; -F &quot;api_secret=&quot;&apos; + api_secret + &apos;&quot; -F &quot;image_file=&apos; + tmp + &apos;&quot;&apos;</span><br><span class="line">            var res = shell.exec(cmd, &#123;silent: true&#125;).toString()</span><br><span class="line">            result.push(res)</span><br><span class="line"></span><br><span class="line">            if (item == arr.length - 2) &#123;</span><br><span class="line">                for (var index in result) &#123;</span><br><span class="line">                    var res = JSON.parse(result[index])</span><br><span class="line">                    if (typeof res.cards == &apos;object&apos;) &#123;</span><br><span class="line">                       console.log(res.cards[0].name + &apos; &apos; + res.cards[0].id_card_number)</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        console.log(result[item])</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, item * 1000)</span><br><span class="line">    &#125;(item))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<h3 id="二-项目初始化"><a href="#二-项目初始化" class="headerlink" title="二 项目初始化"></a>二 项目初始化</h3><p>通过命令初始化一个空的项目，关于vue-cli的说明可见<a href="https://github.com/vuejs/vue-cli" target="_blank" rel="noopener">Github地址</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init &lt;template&gt; &lt;project-name&gt;</span><br></pre></td></tr></table></figure></p>
-<p>至此，我们通过命令创建自己的项目。命令执行后会有一些列的选项可供选择，自己自行填写，也可全部按照默认的来。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack todolist-vue</span><br><span class="line">cd todolist-vue</span><br><span class="line">npm install # 如果npm较慢，建议使用cnpm</span><br></pre></td></tr></table></figure></p>
-<h3 id="三-项目运行"><a href="#三-项目运行" class="headerlink" title="三 项目运行"></a>三 项目运行</h3><p>执行如下命令，运行项目，运行成功后，会自动打开浏览器，如果未打开，可以手动输入<a href="http://localhost:8081/#/" target="_blank" rel="noopener">http://localhost:8081/#/</a> ，端口号可能不同，既可以看到vue页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev # 命令可能不同，具体可以看目录下的README.md文件</span><br></pre></td></tr></table></figure></p>
+<p>为什么要写成setTimeout，而不是直接执行？是因为如果一次请求过多，api接口会返回一个<code>error_message</code>，说当前接口请求过多，所以每次延时执行，保证不会丢失数据</p>
+<ul>
+<li>执行<code>node index</code>，即会打印出<strong>姓名</strong> + <strong>身份证号</strong>  </li>
+</ul>
 
       
     </div>
@@ -396,7 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Vue-js/" rel="tag"># Vue.js</a>
+            <a href="/tags/Nodejs/" rel="tag"># Nodejs</a>
           
         </div>
       
@@ -409,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/27/缓存/" rel="next" title="Web 缓存">
-                <i class="fa fa-chevron-left"></i> Web 缓存
+              <a href="/2018/02/26/Vue.js/Vue Webpack 项目灰度发布/" rel="next" title="Web项目灰度发布 A/B测试">
+                <i class="fa fa-chevron-left"></i> Web项目灰度发布 A/B测试
               </a>
             
           </div>
@@ -419,8 +427,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/08/07/Vue.js/simple-todolist-by-vue/" rel="prev" title="Vue实践 【二】todolist开发">
-                Vue实践 【二】todolist开发 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/15/Vue.js/Vue 多语言vue-i18n/" rel="prev" title="vue项目国际化 vue-i18n 使用">
+                vue项目国际化 vue-i18n 使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -561,7 +569,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-环境搭建"><span class="nav-number">1.</span> <span class="nav-text">一 环境搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-项目初始化"><span class="nav-number">2.</span> <span class="nav-text">二 项目初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-项目运行"><span class="nav-number">3.</span> <span class="nav-text">三 项目运行</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图像识别Api"><span class="nav-number">2.1.</span> <span class="nav-text">图像识别Api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nodejs实现"><span class="nav-number">2.2.</span> <span class="nav-text">Nodejs实现</span></a></li></ol></li></ol></div>
             
 
           </div>
