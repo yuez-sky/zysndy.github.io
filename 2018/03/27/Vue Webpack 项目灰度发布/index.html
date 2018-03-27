@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Nodejs," />
+  <meta name="keywords" content="Git," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="起因因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。 实现图像识别Api图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是Face++  登陆注册并完善相关信息后，提供了AppKey和AppSecret来调用提供的Api 在使用Postman简单测试后，发现可">
-<meta name="keywords" content="Nodejs">
+<meta name="description" content="目的实现前端项目多个版本共存。如果只存在一份资源，会导致每次修改都会影响到所有的用户，对于持续更新的Web项目来说，需要保证每次的修改只会影响到小部分用户，而不是所有的，控制范围，减少损失。 实现项目采用的是git版本控制 原直接以master分支作为production，功能修改完善合并到master上，然后直接在master上编辑提交，线上更新代码。 现在修改成：通过分支来控制，并保">
+<meta name="keywords" content="Git">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nodejs + Face++ 识别身份证照片">
-<meta property="og:url" content="https://zysndy.github.io/2018/03/27/Nodejs-Face-识别身份证照片/index.html">
+<meta property="og:title" content="Web项目灰度发布 A&#x2F;B测试">
+<meta property="og:url" content="https://zysndy.github.io/2018/03/27/Vue Webpack 项目灰度发布/index.html">
 <meta property="og:site_name" content="zysndy&#39;s Blog">
-<meta property="og:description" content="起因因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。 实现图像识别Api图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是Face++  登陆注册并完善相关信息后，提供了AppKey和AppSecret来调用提供的Api 在使用Postman简单测试后，发现可">
+<meta property="og:description" content="目的实现前端项目多个版本共存。如果只存在一份资源，会导致每次修改都会影响到所有的用户，对于持续更新的Web项目来说，需要保证每次的修改只会影响到小部分用户，而不是所有的，控制范围，减少损失。 实现项目采用的是git版本控制 原直接以master分支作为production，功能修改完善合并到master上，然后直接在master上编辑提交，线上更新代码。 现在修改成：通过分支来控制，并保">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T08:39:27.672Z">
+<meta property="og:updated_time" content="2018-03-27T09:12:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nodejs + Face++ 识别身份证照片">
-<meta name="twitter:description" content="起因因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。 实现图像识别Api图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是Face++  登陆注册并完善相关信息后，提供了AppKey和AppSecret来调用提供的Api 在使用Postman简单测试后，发现可">
+<meta name="twitter:title" content="Web项目灰度发布 A&#x2F;B测试">
+<meta name="twitter:description" content="目的实现前端项目多个版本共存。如果只存在一份资源，会导致每次修改都会影响到所有的用户，对于持续更新的Web项目来说，需要保证每次的修改只会影响到小部分用户，而不是所有的，控制范围，减少损失。 实现项目采用的是git版本控制 原直接以master分支作为production，功能修改完善合并到master上，然后直接在master上编辑提交，线上更新代码。 现在修改成：通过分支来控制，并保">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zysndy.github.io/2018/03/27/Nodejs-Face-识别身份证照片/"/>
+  <link rel="canonical" href="https://zysndy.github.io/2018/03/27/Vue Webpack 项目灰度发布/"/>
 
 
 
 
 
-  <title>Nodejs + Face++ 识别身份证照片 | zysndy's Blog</title>
+  <title>Web项目灰度发布 A/B测试 | zysndy's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2018/03/27/Nodejs-Face-识别身份证照片/">
+    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2018/03/27/Vue Webpack 项目灰度发布/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zysndy">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nodejs + Face++ 识别身份证照片</h1>
+          <h1 class="post-title" itemprop="name headline">Web项目灰度发布 A/B测试</h1>
         
 
         <div class="post-meta">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T16:38:43+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T17:01:17+08:00">
                 2018-03-27
               </time>
             
@@ -321,8 +321,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/03/27/Nodejs-Face-识别身份证照片/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/27/Nodejs-Face-识别身份证照片/" itemprop="commentsCount"></span>
+                <a href="/2018/03/27/Vue Webpack 项目灰度发布/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2018/03/27/Vue Webpack 项目灰度发布/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -350,30 +350,31 @@
       
 
       
-        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>因为有这样一件事情，需要获取身份证正面照中的姓名和身份证号，如果全部通过眼看手敲的话，很费事，而且浪费时间，作为一个程序员，当然能想如果能自动化执行就好了。</p>
-<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="图像识别Api"><a href="#图像识别Api" class="headerlink" title="图像识别Api"></a>图像识别Api</h3><p>图片识别暂时还没有接触过，所以就去找了能够提供图像识别的第三方应用，这边我是用的是<strong>Face++</strong></p>
+        <h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>实现前端项目多个版本共存。如果只存在一份资源，会导致每次修改都会影响到所有的用户，对于持续更新的Web项目来说，需要保证每次的修改只会影响到小部分用户，而不是所有的，控制范围，减少损失。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>项目采用的是<code>git</code>版本控制</p>
+<p>原直接以<strong>master</strong>分支作为production，功能修改完善合并到master上，然后直接在master上编辑提交，线上更新代码。</p>
+<p>现在修改成：通过分支来控制，并保留多份代码，保留以后老版本修改的可能性</p>
 <ul>
-<li>登陆注册并完善相关信息后，提供了<code>AppKey</code>和<code>AppSecret</code>来调用提供的Api</li>
-<li>在使用<code>Postman</code>简单测试后，发现可行，post请求后，提供的接口会返回一组身份的信息JSON数据</li>
+<li>从master生成分支release-1.0.0</li>
+<li>releaes-1.0.0 在线上部署，通过指定路径来访问改目录的编译后文件</li>
+<li>当有其他新功能时，产生新的分支release-x.x.x，部署访问</li>
 </ul>
-<blockquote>
-<p>Postman 是通过能强大的网页调试与发送网页HTTP请求，并能运行测试用例的的Chrome插件，现在提供了客户端。只要在GUI界面里，填写相应的URl和数据，选择相应的方法，<code>POST</code>、 <code>GET</code>、 <code>PUT</code>、 <code>DELETE</code>，就能够将结果返回回来，不需要编写代码。<a href="https://www.getpostman.com/" target="_blank" rel="noopener">官网链接</a></p>
-</blockquote>
-<h3 id="Nodejs实现"><a href="#Nodejs实现" class="headerlink" title="Nodejs实现"></a>Nodejs实现</h3><p>我是在mac的终端下开发的，如果是window环境系，部分命令不适用，需要替换合适的命令。</p>
-<ol>
-<li>目录结构</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * images 资源文件</span><br><span class="line"> * package.json  执行npm init 后会自动生产</span><br><span class="line"> * index.js 实现的逻辑文件</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">- idCard</span><br><span class="line">    - index.js</span><br><span class="line">    - images</span><br><span class="line">        - ***.jpg</span><br><span class="line">        - ***.png</span><br><span class="line">        - ....</span><br><span class="line">    - package.json</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>安装 <code>shelljs</code> 包<br>因为需要简单的shell命令执行</p>
+<p>最后达到test.com/v1/，test.com/v2 这种访问效果。</p>
+<h2 id="项目配置的修改"><a href="#项目配置的修改" class="headerlink" title="项目配置的修改"></a>项目配置的修改</h2><ul>
+<li><p>config/index.js<br> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">// webpack 编译的配置文件，</span><br><span class="line">// 主要修改时动态改变编译后的文件放置目录，配合Apache控制访问</span><br><span class="line"></span><br><span class="line">// 增加版本获取函数 getVersion()，通过匹配当前版本名称，来获取具体的版本号</span><br><span class="line">// 要求，对版本号的命名有格式的要求</span><br><span class="line">var shell = require(&apos;shelljs&apos;)</span><br><span class="line">var os = require(&apos;os&apos;)</span><br><span class="line">function getVersion() &#123;</span><br><span class="line">  function exec (cmd) &#123;</span><br><span class="line">    return shell.exec(cmd, &#123;silent: true&#125;).toString().trim()</span><br><span class="line">  &#125;</span><br><span class="line">  var releaseName = exec(&quot;git branch -vv|grep &apos;*&apos;&quot;)</span><br><span class="line">  if (os.platform === &apos;win32&apos;) &#123;</span><br><span class="line">    releaseName = exec(&quot;git branch -vv|findstr &apos;*&apos;&quot;)</span><br><span class="line">  &#125;</span><br><span class="line">  var reg = /\[origin\/release\-v[\d.?]*\]/</span><br><span class="line">  if (reg.test(releaseName)) &#123;</span><br><span class="line">    var arr = releaseName.match(reg)</span><br><span class="line">    return arr[0].replace(&apos;[origin/release-&apos;, &apos;&apos;).replace(/\./g, &apos;&apos;).replace(&apos;]&apos;, &apos;&apos;).toString()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 修改env配置 和 build下的assetsPublicPath</span><br><span class="line">module.exports = &#123;</span><br><span class="line">  build: &#123;</span><br><span class="line">    env: &#123;...require(&apos;./prod.env&apos;), cashierVersion: &quot;&apos;&quot; + getVersion() + &quot;&apos;&quot;&#125;,</span><br><span class="line">    index: path.resolve(__dirname, &apos;../dist/index.html&apos;),</span><br><span class="line">    assetsRoot: path.resolve(__dirname, &apos;../dist/&apos;),</span><br><span class="line">    assetsSubDirectory: &apos;static&apos;,</span><br><span class="line">    assetsPublicPath: &apos;/&apos; + getVersion() + &apos;/&apos;,</span><br><span class="line">  &#125;,</span><br><span class="line">  dev: &#123;</span><br><span class="line">    env: &#123;...require(&apos;./dev.env&apos;), cashierVersion: &quot;&apos;&quot; + getVersion() + &quot;&apos;&quot;&#125;,</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>index.js实现（比较简单）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">var shell = require(&apos;shelljs&apos;)</span><br><span class="line">var images = shell.exec(&apos;ls ./images/*&apos;, &#123;silent: true&#125;).toString()</span><br><span class="line">var arr = images.split(&apos;\n&apos;)</span><br><span class="line"></span><br><span class="line">var api_key = &apos;xxx&apos; // 自己申请的apikey</span><br><span class="line">var api_secret = &apos;xxx&apos; // 自己申请的api_secret</span><br><span class="line">var result = []</span><br><span class="line">for (var item in arr) &#123;</span><br><span class="line">    (function(item) &#123;</span><br><span class="line">        setTimeout(function() &#123;</span><br><span class="line">            var tmp = &apos;@&apos; + arr[item]</span><br><span class="line">            if (tmp == &apos;@&apos;) &#123;</span><br><span class="line">                return</span><br><span class="line">            &#125;</span><br><span class="line">            var cmd = &apos;curl -X POST &quot;https://api-cn.faceplusplus.com/cardpp/v1/ocridcard&quot; -F &quot;api_key=&quot;&apos; + api_key +  &apos;&quot; -F &quot;api_secret=&quot;&apos; + api_secret + &apos;&quot; -F &quot;image_file=&apos; + tmp + &apos;&quot;&apos;</span><br><span class="line">            var res = shell.exec(cmd, &#123;silent: true&#125;).toString()</span><br><span class="line">            result.push(res)</span><br><span class="line"></span><br><span class="line">            if (item == arr.length - 2) &#123;</span><br><span class="line">                for (var index in result) &#123;</span><br><span class="line">                    var res = JSON.parse(result[index])</span><br><span class="line">                    if (typeof res.cards == &apos;object&apos;) &#123;</span><br><span class="line">                       console.log(res.cards[0].name + &apos; &apos; + res.cards[0].id_card_number)</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        console.log(result[item])</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;, item * 1000)</span><br><span class="line">    &#125;(item))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<li><p>src/router/index.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 修改route数组，增加根path路径</span><br><span class="line">mode: &apos;history&apos;,</span><br><span class="line">routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: process.env.NODE_ENV === &apos;development&apos; ? &apos;/&apos; : (&apos;/&apos; + process.env.cashierVersion + &apos;/&apos;),</span><br><span class="line">      component: xxx,</span><br><span class="line">      children: [</span><br><span class="line">          ...</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p>为什么要写成setTimeout，而不是直接执行？是因为如果一次请求过多，api接口会返回一个<code>error_message</code>，说当前接口请求过多，所以每次延时执行，保证不会丢失数据</p>
+</ul>
+<h2 id="上线时Apache配置"><a href="#上线时Apache配置" class="headerlink" title="上线时Apache配置"></a>上线时Apache配置</h2><p>配置Apache</p>
+<p>当访问test.com/xxx，访问的是实际服务器部署的test目录下xxx/dist/index.html文件</p>
+<h2 id="访问多个版本"><a href="#访问多个版本" class="headerlink" title="访问多个版本"></a>访问多个版本</h2><p>原本服务器上之后一个test目录，所有的文件都在test目录下，包括编译后的文件</p>
+<p>现在服务器的test目录下有多个文件，如果vxx1， vxx2，根据实际的路由情况，访问到具体的目录下，如果有必要</p>
 <ul>
-<li>执行<code>node index</code>，即会打印出<strong>姓名</strong> + <strong>身份证号</strong>  </li>
+<li>可以以ip 或cookie 通过nginx来控制访问</li>
+<li>可以通过登陆后的信息，在实际的项目代码中来控制<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// vue-router 中有beforeEach</span><br><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">    // 通过代码进行实际的访问控制</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -392,7 +393,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Nodejs/" rel="tag"># Nodejs</a>
+            <a href="/tags/Git/" rel="tag"># Git</a>
           
         </div>
       
@@ -405,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/18/Git-日常使用命令/" rel="next" title="Git 日常使用命令">
-                <i class="fa fa-chevron-left"></i> Git 日常使用命令
+              <a href="/2018/03/27/汉字提取-有道Api翻译/" rel="next" title="汉字提取 + 有道Api翻译">
+                <i class="fa fa-chevron-left"></i> 汉字提取 + 有道Api翻译
               </a>
             
           </div>
@@ -415,8 +416,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/03/27/缓存/" rel="prev" title="Web 缓存">
-                Web 缓存 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/03/27/Vue 多语言vue-i18n/" rel="prev" title="vue项目国际化 vue-i18n 使用">
+                vue项目国际化 vue-i18n 使用 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -548,7 +549,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图像识别Api"><span class="nav-number">2.1.</span> <span class="nav-text">图像识别Api</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nodejs实现"><span class="nav-number">2.2.</span> <span class="nav-text">Nodejs实现</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#目的"><span class="nav-number">1.</span> <span class="nav-text">目的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目配置的修改"><span class="nav-number">3.</span> <span class="nav-text">项目配置的修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上线时Apache配置"><span class="nav-number">4.</span> <span class="nav-text">上线时Apache配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#访问多个版本"><span class="nav-number">5.</span> <span class="nav-text">访问多个版本</span></a></li></ol></div>
             
 
           </div>
