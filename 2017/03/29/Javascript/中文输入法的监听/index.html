@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="ES6," />
+  <meta name="keywords" content="jQuery," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="箭头函数语法比普通函数要短很多，并且不绑定自己的this 形式简单的使用形式要不普通的函数更短更方便 12345678910111213141516171819202122232425// 普通函数function xx () &amp;#123;    xxx    xxx    return xx&amp;#125;// 箭头函数,省略了function关键字() =&amp;gt; &amp;#123;    xxx">
-<meta name="keywords" content="ES6">
+<meta name="description" content="原因当在input输入框中输入中文与英文输入不同，英文输入的同时会在输入框中展示，而输入中文则需要等待候选词确定后，输入框的值才是正确的值。 实现1234567891011121314151617&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;J_input&amp;quot; /&amp;gt;&amp;lt;script type=&amp;quot;text/javascript&amp;">
+<meta name="keywords" content="jQuery">
 <meta property="og:type" content="article">
-<meta property="og:title" content="箭头函数">
-<meta property="og:url" content="https://zysndy.github.io/2017/11/10/Javascript/ES6-箭头函数/index.html">
+<meta property="og:title" content="中文输入法监听">
+<meta property="og:url" content="https://zysndy.github.io/2017/03/29/Javascript/中文输入法的监听/index.html">
 <meta property="og:site_name" content="zysndy&#39;s Blog">
-<meta property="og:description" content="箭头函数语法比普通函数要短很多，并且不绑定自己的this 形式简单的使用形式要不普通的函数更短更方便 12345678910111213141516171819202122232425// 普通函数function xx () &amp;#123;    xxx    xxx    return xx&amp;#125;// 箭头函数,省略了function关键字() =&amp;gt; &amp;#123;    xxx">
+<meta property="og:description" content="原因当在input输入框中输入中文与英文输入不同，英文输入的同时会在输入框中展示，而输入中文则需要等待候选词确定后，输入框的值才是正确的值。 实现1234567891011121314151617&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;J_input&amp;quot; /&amp;gt;&amp;lt;script type=&amp;quot;text/javascript&amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T23:59:01.000Z">
+<meta property="og:updated_time" content="2018-03-28T00:07:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="箭头函数">
-<meta name="twitter:description" content="箭头函数语法比普通函数要短很多，并且不绑定自己的this 形式简单的使用形式要不普通的函数更短更方便 12345678910111213141516171819202122232425// 普通函数function xx () &amp;#123;    xxx    xxx    return xx&amp;#125;// 箭头函数,省略了function关键字() =&amp;gt; &amp;#123;    xxx">
+<meta name="twitter:title" content="中文输入法监听">
+<meta name="twitter:description" content="原因当在input输入框中输入中文与英文输入不同，英文输入的同时会在输入框中展示，而输入中文则需要等待候选词确定后，输入框的值才是正确的值。 实现1234567891011121314151617&amp;lt;input type=&amp;quot;text&amp;quot; class=&amp;quot;J_input&amp;quot; /&amp;gt;&amp;lt;script type=&amp;quot;text/javascript&amp;">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zysndy.github.io/2017/11/10/Javascript/ES6-箭头函数/"/>
+  <link rel="canonical" href="https://zysndy.github.io/2017/03/29/Javascript/中文输入法的监听/"/>
 
 
 
 
 
-  <title>箭头函数 | zysndy's Blog</title>
+  <title>中文输入法监听 | zysndy's Blog</title>
   
 
 
@@ -263,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2017/11/10/Javascript/ES6-箭头函数/">
+    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2017/03/29/Javascript/中文输入法的监听/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zysndy">
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">箭头函数</h1>
+          <h1 class="post-title" itemprop="name headline">中文输入法监听</h1>
         
 
         <div class="post-meta">
@@ -292,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-10T16:31:35+08:00">
-                2017-11-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-29T16:31:35+08:00">
+                2017-03-29
               </time>
             
 
@@ -333,8 +333,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/11/10/Javascript/ES6-箭头函数/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/11/10/Javascript/ES6-箭头函数/" itemprop="commentsCount"></span>
+                <a href="/2017/03/29/Javascript/中文输入法的监听/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/03/29/Javascript/中文输入法的监听/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -362,15 +362,16 @@
       
 
       
-        <h2 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h2><p>语法比普通函数要短很多，并且不绑定自己的this</p>
-<h2 id="形式"><a href="#形式" class="headerlink" title="形式"></a>形式</h2><p>简单的使用形式要不普通的函数更短更方便</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// 普通函数</span><br><span class="line">function xx () &#123;</span><br><span class="line">    xxx</span><br><span class="line">    xxx</span><br><span class="line">    return xx</span><br><span class="line">&#125;</span><br><span class="line">// 箭头函数,省略了function关键字</span><br><span class="line">() =&gt; &#123;</span><br><span class="line">    xxx</span><br><span class="line">    xxx</span><br><span class="line">    return xxx</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 如果只有return语句</span><br><span class="line">function xx (xx) &#123;</span><br><span class="line">    return xxx</span><br><span class="line">&#125;</span><br><span class="line">// 可以直接写成</span><br><span class="line">xx =&gt; xxx</span><br><span class="line">// 多个参数</span><br><span class="line">（xx1, xx2）=&gt; xxx</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// 实际的例子</span><br><span class="line">[1,2,3].filter(e =&gt; e &gt; 2)</span><br></pre></td></tr></table></figure>
-<h2 id="对于this"><a href="#对于this" class="headerlink" title="对于this"></a>对于this</h2><h3 id="不绑定this"><a href="#不绑定this" class="headerlink" title="不绑定this"></a>不绑定this</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">// setTimeout生效时，this指向全局对象</span><br><span class="line">function test () &#123;</span><br><span class="line">    this.val = 1</span><br><span class="line">    this.show = function () &#123;</span><br><span class="line">        setTimeout(function () &#123;</span><br><span class="line">            console.log(this.val) </span><br><span class="line">        &#125;, 100)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var t = new test()</span><br><span class="line">t.show() // undefined</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">function test () &#123;</span><br><span class="line">    this.val = 1</span><br><span class="line">    var that = this</span><br><span class="line">    this.show = function()&#123;</span><br><span class="line">        setTimeout(function () &#123;</span><br><span class="line">            console.log(that.val)</span><br><span class="line">        &#125;, 100)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var t = new test()</span><br><span class="line">t.show() // 1</span><br><span class="line"></span><br><span class="line">// 箭头函数与普通函数的区别</span><br><span class="line">function test () &#123;</span><br><span class="line">    this.val = 1</span><br><span class="line">    this.show = () =&gt; &#123;</span><br><span class="line">        setTimeout(() =&gt; &#123;</span><br><span class="line">            console.log(this.val)</span><br><span class="line">        &#125;, 100)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">var t = new test()</span><br><span class="line">t.show() // 1</span><br></pre></td></tr></table></figure>
-<h3 id="Call和Apply"><a href="#Call和Apply" class="headerlink" title="Call和Apply"></a>Call和Apply</h3><p>Call和Apply可以更改函数绑定的对象，对箭头函数无效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// MDN 例子</span><br><span class="line">var adder = &#123;</span><br><span class="line">  base : 1,</span><br><span class="line">    </span><br><span class="line">  add : function(a) &#123;</span><br><span class="line">    var f = v =&gt; v + this.base;</span><br><span class="line">    return f(a);</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  addThruCall: function(a) &#123;</span><br><span class="line">    var f = v =&gt; v + this.base;</span><br><span class="line">    var b = &#123;</span><br><span class="line">      base : 2</span><br><span class="line">    &#125;;</span><br><span class="line">            </span><br><span class="line">    return f.call(b, a);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">console.log(adder.add(1));         // 输出 2</span><br><span class="line">console.log(adder.addThruCall(1)); // 仍然输出 2</span><br></pre></td></tr></table></figure></p>
-<h2 id="无arguments参数"><a href="#无arguments参数" class="headerlink" title="无arguments参数"></a>无arguments参数</h2><p><br>箭头参数没有arguments参数，可以通过剩余参数<code>...rest</code>来获取参数列表<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 普通函数</span><br><span class="line">function test(a, b) &#123;</span><br><span class="line">    console.log(arguments)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">test(1,2); // [1, 2]</span><br><span class="line"></span><br><span class="line">// 箭头函数</span><br><span class="line">let test = (a, b) =&gt; &#123;</span><br><span class="line">    console.log(arguments)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">test() // 报错</span><br><span class="line"></span><br><span class="line">// 使用剩余参数</span><br><span class="line">let test = (...rest) &#123;</span><br><span class="line">    console.log(rest)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="不能使用new操作符"><a href="#不能使用new操作符" class="headerlink" title="不能使用new操作符"></a>不能使用new操作符</h2><h2 id="无protoprototype"><a href="#无protoprototype" class="headerlink" title="无protoprototype"></a>无protoprototype</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
-<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener">MDN 箭头函数</a></p>
-</blockquote>
+        <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>当在input输入框中输入中文与英文输入不同，英文输入的同时会在输入框中展示，而输入中文则需要等待候选词确定后，输入框的值才是正确的值。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=&quot;text&quot; class=&quot;J_input&quot; /&gt;</span><br><span class="line"></span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;./jquery-3.2.0.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    $(&quot;.J_input&quot;).on(&apos;input&apos;, function() &#123;</span><br><span class="line">        if($(this).prop(&apos;comStart&apos;)) return;    // 中文输入过程中不截断</span><br><span class="line">        var value = $(this).val();</span><br><span class="line">        console.log(&apos;当前输入：&apos;+value);</span><br><span class="line">    &#125;).on(&apos;compositionstart&apos;, function()&#123;</span><br><span class="line">        $(this).prop(&apos;comStart&apos;, true);</span><br><span class="line">        console.log(&apos;中文输入：开始&apos;);</span><br><span class="line">    &#125;).on(&apos;compositionend&apos;, function()&#123;</span><br><span class="line">        $(this).prop(&apos;comStart&apos;, false);</span><br><span class="line">        console.log(&apos;中文输入：结束，value=&apos;+$(this).val());</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>compositionstart</li>
+</ul>
+<p>当浏览器有非直接的文字输入时, compositionstart事件会以同步模式触发</p>
+<ul>
+<li>compositionend</li>
+</ul>
+<p>当浏览器是直接的文字输入时, compositionend会以同步模式触发.</p>
 
       
     </div>
@@ -388,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ES6/" rel="tag"># ES6</a>
+            <a href="/tags/jQuery/" rel="tag"># jQuery</a>
           
         </div>
       
@@ -401,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/08/14/Vue.js/Vue-props/" rel="next" title="Vue 组件及其通信方式">
-                <i class="fa fa-chevron-left"></i> Vue 组件及其通信方式
+              <a href="/2017/03/16/Vue.js/Vue生命周期/" rel="next" title="Vue 生命周期">
+                <i class="fa fa-chevron-left"></i> Vue 生命周期
               </a>
             
           </div>
@@ -411,8 +412,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/02/26/Vue.js/Vue Webpack 项目灰度发布/" rel="prev" title="Web项目灰度发布 A/B测试">
-                Web项目灰度发布 A/B测试 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/04/27/缓存/" rel="prev" title="Web 缓存">
+                Web 缓存 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -553,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#箭头函数"><span class="nav-number">1.</span> <span class="nav-text">箭头函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#形式"><span class="nav-number">2.</span> <span class="nav-text">形式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于this"><span class="nav-number">3.</span> <span class="nav-text">对于this</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不绑定this"><span class="nav-number">3.1.</span> <span class="nav-text">不绑定this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Call和Apply"><span class="nav-number">3.2.</span> <span class="nav-text">Call和Apply</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无arguments参数"><span class="nav-number">4.</span> <span class="nav-text">无arguments参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不能使用new操作符"><span class="nav-number">5.</span> <span class="nav-text">不能使用new操作符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无protoprototype"><span class="nav-number">6.</span> <span class="nav-text">无protoprototype</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#原因"><span class="nav-number">1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
             
 
           </div>
