@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Javascript," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="浏览器流式布局 html 渲染成Dom，CSS渲染成CSSOM，结成和生Render Tree 计算render tree节点的样式，绘制到页面上 render tree 通常只需要一次便利，但对于table及其内部元素，可能需要多次计算，通常要3倍同等元素的时间，所以避免使用table布局   回流必定重绘，重绘不一定引起回流  回流 reflow当Render Tree中部分或全部元素的尺寸">
+<meta name="description" content="针对函数表达式与函数声明的区别123456789getName()var getName = function (type)&amp;#123;    console.log(&amp;apos;321&amp;apos;)&amp;#125;getName()function getName() &amp;#123;    console.log(&amp;apos;123&amp;apos;)&amp;#125;getName() 这个最终结果是什么？">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重绘回流">
-<meta property="og:url" content="https://zysndy.github.io/2017/03/02/重绘回流/index.html">
+<meta property="og:title" content="函数表达式与函数声明">
+<meta property="og:url" content="https://zysndy.github.io/2017/06/12/Javascript/变量提升/index.html">
 <meta property="og:site_name" content="zysndy&#39;s Blog">
-<meta property="og:description" content="浏览器流式布局 html 渲染成Dom，CSS渲染成CSSOM，结成和生Render Tree 计算render tree节点的样式，绘制到页面上 render tree 通常只需要一次便利，但对于table及其内部元素，可能需要多次计算，通常要3倍同等元素的时间，所以避免使用table布局   回流必定重绘，重绘不一定引起回流  回流 reflow当Render Tree中部分或全部元素的尺寸">
+<meta property="og:description" content="针对函数表达式与函数声明的区别123456789getName()var getName = function (type)&amp;#123;    console.log(&amp;apos;321&amp;apos;)&amp;#125;getName()function getName() &amp;#123;    console.log(&amp;apos;123&amp;apos;)&amp;#125;getName() 这个最终结果是什么？">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-27T22:35:32.000Z">
+<meta property="og:updated_time" content="2018-03-28T00:01:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重绘回流">
-<meta name="twitter:description" content="浏览器流式布局 html 渲染成Dom，CSS渲染成CSSOM，结成和生Render Tree 计算render tree节点的样式，绘制到页面上 render tree 通常只需要一次便利，但对于table及其内部元素，可能需要多次计算，通常要3倍同等元素的时间，所以避免使用table布局   回流必定重绘，重绘不一定引起回流  回流 reflow当Render Tree中部分或全部元素的尺寸">
+<meta name="twitter:title" content="函数表达式与函数声明">
+<meta name="twitter:description" content="针对函数表达式与函数声明的区别123456789getName()var getName = function (type)&amp;#123;    console.log(&amp;apos;321&amp;apos;)&amp;#125;getName()function getName() &amp;#123;    console.log(&amp;apos;123&amp;apos;)&amp;#125;getName() 这个最终结果是什么？">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://zysndy.github.io/2017/03/02/重绘回流/"/>
+  <link rel="canonical" href="https://zysndy.github.io/2017/06/12/Javascript/变量提升/"/>
 
 
 
 
 
-  <title>重绘回流 | zysndy's Blog</title>
+  <title>函数表达式与函数声明 | zysndy's Blog</title>
   
 
 
@@ -262,7 +263,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2017/03/02/重绘回流/">
+    <link itemprop="mainEntityOfPage" href="https://zysndy.github.io/2017/06/12/Javascript/变量提升/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="zysndy">
@@ -279,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">重绘回流</h1>
+          <h1 class="post-title" itemprop="name headline">函数表达式与函数声明</h1>
         
 
         <div class="post-meta">
@@ -291,8 +292,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-02T17:50:17+08:00">
-                2017-03-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-12T19:20:14+08:00">
+                2017-06-12
               </time>
             
 
@@ -302,6 +303,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Javscript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javscript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -310,8 +333,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/02/重绘回流/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/03/02/重绘回流/" itemprop="commentsCount"></span>
+                <a href="/2017/06/12/Javascript/变量提升/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/2017/06/12/Javascript/变量提升/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,27 +362,25 @@
       
 
       
-        <ul>
-<li>浏览器流式布局</li>
-<li>html 渲染成Dom，CSS渲染成CSSOM，结成和生Render Tree</li>
-<li>计算render tree节点的样式，绘制到页面上</li>
-<li>render tree 通常只需要一次便利，但对于table及其内部元素，可能需要多次计算，通常要3倍同等元素的时间，所以避免使用table布局</li>
-</ul>
-<p><strong> 回流必定重绘，重绘不一定引起回流 </strong></p>
-<h2 id="回流-reflow"><a href="#回流-reflow" class="headerlink" title="回流 reflow"></a>回流 reflow</h2><p>当<code>Render Tree</code>中<strong>部分或全部元素的尺寸，结构，或某些属性发生改变时</strong>，浏览器重新渲染部分或全部文档的过程称为回流 </p>
-<p>导致回流的操作：</p>
+        <h2 id="针对函数表达式与函数声明的区别"><a href="#针对函数表达式与函数声明的区别" class="headerlink" title="针对函数表达式与函数声明的区别"></a>针对函数表达式与函数声明的区别</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">getName()</span><br><span class="line">var getName = function (type)&#123;</span><br><span class="line">    console.log(&apos;321&apos;)</span><br><span class="line">&#125;</span><br><span class="line">getName()</span><br><span class="line">function getName() &#123;</span><br><span class="line">    console.log(&apos;123&apos;)</span><br><span class="line">&#125;</span><br><span class="line">getName()</span><br></pre></td></tr></table></figure>
+<p>这个最终结果是什么？</p>
+<p>// 函数声明<br>function xxx() {<br>}</p>
+<p>// 函数表达式, 把一个函数赋值给变量<br>var xxx = function (){<br>    xxxx<br>}</p>
 <ul>
-<li>页面首次渲染</li>
-<li>浏览器窗口大小发生变化</li>
-<li>元素尺寸或位置发生变化</li>
-<li>元素字体大小变化</li>
-<li>添加或者删除可见当<code>DOM</code>元素</li>
-<li>激活CSS伪类</li>
-<li>查询某些属性或调用的方法</li>
+<li>函数声明会存在作用域提升的情况，</li>
+<li>函数表达式进行时复制，需要在声明之后才会被调用</li>
+<li><p>函数声明无论是放在被调用后，仍然可以正确使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">getName()</span><br><span class="line">function getName() &#123;</span><br><span class="line">    console.log(&apos;123&apos;)</span><br><span class="line">&#125;</span><br><span class="line">// 123</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数表达式不行，会报错</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">getName()</span><br><span class="line">var getName = function (type)&#123;</span><br><span class="line">    console.log(&apos;321&apos;)</span><br><span class="line">&#125;</span><br><span class="line">// Uncaught TypeError: getName is not a function</span><br><span class="line">// 去掉var的声明也同样会报错</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="重绘-repaint"><a href="#重绘-repaint" class="headerlink" title="重绘 repaint"></a>重绘 repaint</h2><p>页面<strong>元素样式的改变并不影响它在文档流中的位置</strong>，浏览器会将新样式赋给元素并重新绘制它，这个过程重绘</p>
-<p>会引起元素位置变化的reflow<br>不会引起位置变化的repaint</p>
-<p>absolute 元素的移动不会触发reflow，除非改变了其定位方式</p>
+<p>针对上述问题的结果是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">123</span><br><span class="line">321</span><br><span class="line">321</span><br></pre></td></tr></table></figure></p>
+<p>参考Blog：</p>
+<blockquote>
+<p><a href="https://github.com/Wscats/Good-text-Share/issues/73" target="_blank" rel="noopener">https://github.com/Wscats/Good-text-Share/issues/73</a></p>
+</blockquote>
 
       
     </div>
@@ -375,6 +396,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Javascript/" rel="tag"># Javascript</a>
+          
+        </div>
+      
 
       
       
@@ -384,14 +411,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/04/27/缓存/" rel="next" title="Web 缓存">
+                <i class="fa fa-chevron-left"></i> Web 缓存
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/16/Vue.js/Vue生命周期/" rel="prev" title="Vue 生命周期">
-                Vue 生命周期 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/08/02/Vue.js/vue-learning-init/" rel="prev" title="Vue实践 【一】项目初始化">
+                Vue实践 【一】项目初始化 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -532,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#回流-reflow"><span class="nav-number">1.</span> <span class="nav-text">回流 reflow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重绘-repaint"><span class="nav-number">2.</span> <span class="nav-text">重绘 repaint</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#针对函数表达式与函数声明的区别"><span class="nav-number">1.</span> <span class="nav-text">针对函数表达式与函数声明的区别</span></a></li></ol></div>
             
 
           </div>
